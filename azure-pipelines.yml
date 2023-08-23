@@ -20,6 +20,8 @@ jobs:
         echo 'Hello world'
         ls
 
+- job: Build
+  steps:
   - task: Maven@3
     inputs:
       mavenPomFile: 'pom.xml'
