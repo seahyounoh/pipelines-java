@@ -37,7 +37,7 @@ jobs:
   - task: CopyFiles@2
     displayName: 'Copy Files'
     inputs:
-      Contents: '**/*.zip'
+      Contents: '**/*.war'
       TargetFolder: '$(build.artifactstagingdirectory)'
 
 #Your build pipeline references an undefined variable named ‘Parameters.ArtifactName’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
@@ -45,4 +45,4 @@ jobs:
     displayName: 'Publish Artifact'
     inputs:
       PathtoPublish: '$(build.artifactstagingdirectory)'
-      ArtifactName: '$(Parameters.ArtifactName)'
+      ArtifactName: 'helloWorld'
