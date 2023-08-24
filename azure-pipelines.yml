@@ -10,15 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: TestJob
-  steps:
-  - task: Bash@3
-    inputs:
-      targetType: 'inline'
-      script: |
-        # Write your commands here
-        echo 'Hello world'
-        ls
+
 
 - job: Build
   steps:
@@ -32,4 +24,12 @@ jobs:
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       goals: 'clean package -Pstg -DskipTests=true'
+
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Write your commands here
+        echo 'Hello world'
+        ls      
 
