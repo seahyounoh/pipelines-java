@@ -32,6 +32,7 @@ jobs:
         # Write your commands here
         echo 'Hello world'
         ls      
+        ls target
 
   - task: CopyFiles@2
     displayName: 'Copy Files'
