@@ -33,9 +33,3 @@ jobs:
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       goals: 'clean package -Pstg -DskipTests=true'
 
-  - task: AzureWebApp@1
-    inputs:
-      azureSubscription: 'deployTest'
-      appType: 'webAppLinux'
-      appName: 'testApp'
-      package: '$(System.DefaultWorkingDirectory)/**/*.zip'
